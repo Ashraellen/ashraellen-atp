@@ -18,6 +18,22 @@ Fluent AI translation can still fail literary work through voice flattening, ter
 
 ATP treats these not as edge cases but as system-design problems.
 
+## Origin
+
+The Ashraellen Transcreation Protocol did not begin as a research project. It began as a practical necessity.
+
+For many years, Ashraellen wrote books that largely remained unpublished. Some manuscripts could not realistically be published in the environment where he lived at the time, while professional translation of long-form literary work into English was financially and practically beyond reach.
+
+The arrival of modern AI tools, especially ChatGPT, changed that reality. For the first time, years of drafts could be systematically recovered, catalogued, structured into coherent projects, carried into digital production, and developed across languages without surrendering the authorial voice that made the works worth writing.
+
+What began as an attempt to finish and recover existing books gradually became a broader question:
+
+> **How can AI help an author cross languages without replacing the author?**
+
+ATP grew out of that question. Its purpose is not to let AI write in place of the author, but to help the author carry their own work across linguistic boundaries without losing themselves in the process.
+
+**AI absorbs complexity. The author remains the source of meaning.**
+
 ## Core architecture
 
 ```mermaid
