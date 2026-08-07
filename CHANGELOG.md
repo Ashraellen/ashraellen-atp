@@ -2,6 +2,23 @@
 
 All notable changes to the Ashraellen Transcreation Protocol are recorded here.
 
+## [1.1.0] — 2026-08-07
+
+### Improved
+
+- expanded the public README into a clearer research-facing entry point;
+- added release, license, and citation badges;
+- added a Mermaid architecture diagram;
+- added explicit design principles;
+- added a minimal ATP usage path linked to public protocol templates;
+- clarified model independence and reproducibility;
+- added a focused roadmap for evidence, case studies, archival releases, and authorship-continuity research;
+- clarified that DOI metadata will be added only after an actual Zenodo-archived release exists.
+
+### Release principle
+
+> Success is measured by how well the system prevents the human from losing themselves.
+
 ## [1.0.0] — 2026-08-07
 
 ### Added
