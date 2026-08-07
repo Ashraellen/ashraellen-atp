@@ -4,7 +4,7 @@ title: "Ashraellen Transcreation Protocol"
 type: software
 authors:
   - family-names: "Ashraellen"
-version: "1.0.0"
+version: "1.1.0"
 date-released: "2026-08-07"
 repository-code: "https://github.com/Ashraellen/ashraellen-atp"
 url: "https://github.com/Ashraellen/ashraellen-atp"
