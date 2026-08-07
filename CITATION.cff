@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use or discuss the Ashraellen Transcreation Protocol, please cite this work."
+title: "Ashraellen Transcreation Protocol"
+type: software
+authors:
+  - family-names: "Ashraellen"
+version: "1.0.0"
+date-released: "2026-08-07"
+repository-code: "https://github.com/Ashraellen/ashraellen-atp"
+url: "https://github.com/Ashraellen/ashraellen-atp"
+abstract: "A human-directed protocol for AI-assisted literary transcreation designed to preserve authorial voice, terminology, structure, continuity, and semantic fidelity across multilingual long-form works."
+keywords:
+  - literary transcreation
+  - AI-assisted translation
+  - human-AI collaboration
+  - authorial voice
+  - multilingual publishing
+  - digital humanities
+  - terminology control
+license: "CC-BY-4.0"
