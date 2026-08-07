@@ -1,6 +1,7 @@
 # Ashraellen Transcreation Protocol (ATP)
 
 [![Release](https://img.shields.io/github/v/release/Ashraellen/ashraellen-atp?label=release)](https://github.com/Ashraellen/ashraellen-atp/releases)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21838981.svg)](https://doi.org/10.5281/zenodo.21838981)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Cite](https://img.shields.io/badge/citation-CITATION.cff-blue.svg)](CITATION.cff)
 
@@ -139,7 +140,7 @@ Citation metadata is provided in [`CITATION.cff`](CITATION.cff). GitHub exposes 
 
 Repository: https://github.com/Ashraellen/ashraellen-atp
 
-A DOI will be added after the first Zenodo-archived release.
+DOI: https://doi.org/10.5281/zenodo.21838981
 
 ## Rights
 
