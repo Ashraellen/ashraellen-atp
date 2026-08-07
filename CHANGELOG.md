@@ -13,6 +13,7 @@ All notable changes to the Ashraellen Transcreation Protocol are recorded here.
 - added a minimal ATP usage path linked to public protocol templates;
 - clarified model independence and reproducibility;
 - added a focused roadmap for evidence, case studies, archival releases, and authorship-continuity research;
+- added an Origin section explaining the practical writing and multilingual-production need from which ATP emerged;
 - clarified that DOI metadata will be added only after an actual Zenodo-archived release exists.
 
 ### Release principle
