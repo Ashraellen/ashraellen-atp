@@ -1,14 +1,18 @@
 # Ashraellen Transcreation Protocol (ATP)
 
+[![Release](https://img.shields.io/github/v/release/Ashraellen/ashraellen-atp?label=release)](https://github.com/Ashraellen/ashraellen-atp/releases)
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+[![Cite](https://img.shields.io/badge/citation-CITATION.cff-blue.svg)](CITATION.cff)
+
 **A human-directed protocol for AI-assisted literary transcreation.**
 
 The Ashraellen Transcreation Protocol is a reproducible workflow for moving long-form literary works across languages while preserving authorial voice, terminology, structure, dialogue function, continuity, ambiguity, and semantic pressure.
 
 > **Success is measured by how well the system prevents the human from losing themselves.**
 
-The protocol does not treat removal of the author as progress. It uses AI to absorb coordination burden, comparison work, continuity checking, and linguistic search while keeping canonical authority with the human author or designated editor.
+ATP does not treat removal of the author as progress. It uses AI to absorb coordination burden, comparison work, continuity checking, linguistic search, and repetitive verification while keeping canonical authority with the human author or designated editor.
 
-## Why this exists
+## Why ATP exists
 
 Fluent AI translation can still fail literary work through voice flattening, terminology drift, dialogue convergence, unwanted explanation, polishing away intentional roughness, local improvements that damage long-range continuity, and context loss between sessions or tools.
 
@@ -16,36 +20,72 @@ ATP treats these not as edge cases but as system-design problems.
 
 ## Core architecture
 
-```text
-AUTHORIAL SOURCE
-      ↓
-CONSTRAINT STATE
-      ↓
-AI-ASSISTED TRANSFORMATION
-      ↓
-VALIDATION
-      ↓
-HUMAN DECISION
-      ↓
-UPDATED AUTHORIZED STATE
-      ↺
+```mermaid
+flowchart TD
+    A[Authorial Source] --> B[Constraint State]
+    B --> C[AI-Assisted Transformation]
+    C --> D[Validation]
+    D --> E[Human Decision]
+    E --> F[Updated Authorized State]
+    F --> B
 ```
 
 **Complexity may be delegated. Canonical authority may not.**
 
+## Design principles
+
+1. **Human authority is explicit.** AI suggestions remain proposals until accepted by the human authority layer.
+2. **State is durable.** Canon, terminology, constraints, continuity, and exceptions must survive beyond one model session.
+3. **Fluency is not fidelity.** A smoother sentence may still be a worse literary transfer.
+4. **Local quality cannot override corpus continuity.** A passage is validated against the work, not only against itself.
+5. **Reproducibility means reconstructable decisions.** The durable object is the authorized decision system around the work, not a single prompt.
+6. **Preservation is not imitation.** ATP helps an author move their own work across languages; it is not a style-cloning framework.
+
 ## Human–AI boundary
 
-AI may assist with candidate generation, alternatives, comparison, continuity reconstruction, terminology checks, and detection of semantic or stylistic drift.
+AI may assist with candidate generation, alternatives, comparison, continuity reconstruction, terminology checks, semantic-risk detection, and detection of stylistic drift.
 
 The human authority layer remains responsible for canon, meaning, ambiguity, voice, terminology, exceptions, and final publication approval.
 
 **Human-authored. Human-directed. AI-assisted. State-controlled. Canonically approved.**
 
+For the full responsibility model, see [`docs/human-ai-boundary.md`](docs/human-ai-boundary.md).
+
+## How to use ATP
+
+A minimal ATP workflow is:
+
+1. Define the authoritative source and human authority.
+2. Initialize project constraints with [`protocol/bootstrap-template.md`](protocol/bootstrap-template.md).
+3. Record locked terminology in [`protocol/glossary-template.md`](protocol/glossary-template.md).
+4. Process a stable literary unit with [`protocol/unit-protocol-template.md`](protocol/unit-protocol-template.md).
+5. Validate the candidate using [`protocol/validation-checklist.md`](protocol/validation-checklist.md).
+6. Record the human decision and update durable state.
+7. Carry authorized state forward using [`protocol/handoff-template.md`](protocol/handoff-template.md).
+
+The protocol is model-agnostic: no single AI vendor, model, or conversational interface is required by the method.
+
 ## Reproducibility
 
 Reproducibility does not mean forcing a stochastic model to produce identical wording twice. It means preserving enough authorized state that another qualified operator can reconstruct the decision environment and continue the work coherently.
 
-**The durable object is not the prompt. The durable object is the authorized decision system around the work.**
+> **The durable object is not the prompt. The durable object is the authorized decision system around the work.**
+
+See [`docs/reproducibility.md`](docs/reproducibility.md).
+
+## Worked example
+
+The repository includes a rights-safe synthetic demonstrator:
+
+[`examples/synthetic-demonstrator.md`](examples/synthetic-demonstrator.md)
+
+It shows why a superficially smoother translation can fail when repetition itself carries the literary mechanism.
+
+## Applied evidence
+
+ATP was developed through sustained multilingual literary production in **MONOLITH**, a long-form literary trilogy by Ashraellen. MONOLITH is referenced as an applied production environment, not released as open-source literary content.
+
+The public repository deliberately separates the methodology from the literary work. A real MONOLITH excerpt may be added later only through a separate author-approved case-study gate.
 
 ## Repository map
 
@@ -55,36 +95,44 @@ Reproducibility does not mean forcing a stochastic model to produce identical wo
 - [`docs/validation.md`](docs/validation.md) — validation layers and outcome states
 - [`docs/reproducibility.md`](docs/reproducibility.md) — durable state and decision provenance
 - [`protocol/`](protocol/) — reusable public templates
-- [`examples/synthetic-demonstrator.md`](examples/synthetic-demonstrator.md) — rights-safe worked example
-- [`examples/monolith-case-study-framework.md`](examples/monolith-case-study-framework.md) — framework for a future bounded literary case study
+- [`examples/`](examples/) — rights-safe demonstrations and case-study framework
 - [`research/limitations.md`](research/limitations.md) — known limitations and failure modes
 
-## Applied evidence
+## What ATP is not
 
-The methodology was developed through sustained multilingual literary production in **MONOLITH**, a long-form literary trilogy by Ashraellen. MONOLITH is referenced as an applied production environment, not released as open-source literary content.
+ATP is not autonomous AI authorship, one-click book translation, a style-cloning toolkit, a generic prompt collection, a claim that AI output is correct without human review, or permission to rewrite an author's work merely for fluency.
 
-The first public release deliberately uses a synthetic demonstrator. A real literary excerpt may be added later only after a separate explicit publication decision.
+## Who ATP may be useful for
 
-## What this is not
+ATP is intended for authors producing multilingual editions, literary translators using AI assistance, editors managing long-form continuity, digital-humanities researchers, multilingual publishing teams, and researchers studying human–AI creative collaboration.
 
-This is not autonomous AI authorship, one-click book translation, a style-cloning toolkit, a generic prompt collection, a claim that AI output is correct without human review, or permission to rewrite an author's work merely for fluency.
+## Roadmap
 
-## Who this may be useful for
+The next development arc is focused on evidence and reproducibility rather than feature accumulation:
 
-Authors producing multilingual editions, literary translators using AI assistance, editors managing long-form continuity, digital-humanities researchers, multilingual publishing teams, and researchers studying human–AI creative collaboration.
+- bounded real-world case studies with explicit rights boundaries;
+- corpus-level validation patterns;
+- additional multilingual examples;
+- clearer decision-provenance conventions;
+- DOI-backed archival releases;
+- research-oriented evaluation of authorship continuity.
 
 ## Citation
 
-Citation metadata is provided in [`CITATION.cff`](CITATION.cff). GitHub should expose a **Cite this repository** action after the file is published.
+Citation metadata is provided in [`CITATION.cff`](CITATION.cff). GitHub exposes a **Cite this repository** action from the repository sidebar.
 
 Repository: https://github.com/Ashraellen/ashraellen-atp
 
+A DOI will be added after the first Zenodo-archived release.
+
 ## Rights
 
-Unless otherwise stated, methodology, documentation, and public templates are licensed under **CC BY 4.0**. MONOLITH and all literary works by Ashraellen remain separately copyrighted and are not covered by this license.
+Unless otherwise stated, methodology, documentation, and public templates are licensed under **CC BY 4.0**.
+
+MONOLITH and all literary works by Ashraellen remain separately copyrighted and are not covered by this license.
 
 See [`LICENSE`](LICENSE).
 
 ## Version
 
-**v1.0.0 — 2026-08-07.**
+**Development line: v1.1.0 — 2026-08-07.**
