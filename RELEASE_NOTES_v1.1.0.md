@@ -19,7 +19,18 @@ ATP remains built around a simple boundary:
 - added a minimal usage path linked to reusable protocol templates;
 - clarified model independence and reproducibility;
 - added a focused roadmap for real-world evidence, archival releases, and authorship-continuity research;
+- added an Origin section explaining how ATP emerged from years of unpublished writing, multilingual production constraints, and the practical possibilities opened by modern AI tools, especially ChatGPT;
 - synchronized `CITATION.cff` with version `1.1.0`.
+
+## Origin
+
+ATP did not begin as an abstract research exercise. It grew from a practical writing problem: years of literary drafts existed, but publication and professional English-language translation were often inaccessible. Modern AI tools made it possible to recover, structure, catalogue, and develop those works across languages while preserving human canonical authority.
+
+That practical need became a broader methodological question:
+
+> **How can AI help an author cross languages without replacing the author?**
+
+ATP is one answer to that question.
 
 ## Rights
 
